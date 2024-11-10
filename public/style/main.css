@@ -1,0 +1,75 @@
+@import url("./base.css");
+
+.navigation_menu {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--second);
+    border-bottom: 1px solid var(--shadow);
+    padding: 10px;
+}
+
+.navigation_menu .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    border: 1.5px solid var(--shadow);
+    padding: 10px;
+}
+.navigation_menu .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation_menu .navigation li, 
+.navigation_menu .navigation_media li {
+    margin: 5px;
+}
+.navigation_menu .navigation li a,
+.navigation_menu .navigation_media li a {
+    padding: 5px;
+    color: var(--shadow);
+}
+.navigation_menu .navigation_media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* application menu  */
+.app_menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    z-index: 1;
+}
+.app_menu_item {
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid var(--shadow);
+    width: 90%;
+    border-radius: 20px;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--second); 
+}
+.app_menu_item a ion-icon {
+    font-size: 1.5rem;
+    color: var(--shadow);
+}
+
+/* responsive */
+@media (max-width: 470px) {
+    .navigation_menu {
+        display: none;
+    }
+    .app_menu {
+        display: block;
+    }
+    
+}
